@@ -1,0 +1,80 @@
+# ---------- IDE / Editor ----------
+.vs/
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.njsproj
+*.sln.iml
+*.swp
+*.swo
+*.DS_Store
+Thumbs.db
+
+# ---------- .NET build output ----------
+bin/
+obj/
+out/
+publish/
+artifacts/
+TestResults/
+[Dd]ebug/
+[Rr]elease/
+[Dd]ebugPublic/
+x64/
+x86/
+[Ll]og/
+[Ll]ogs/
+
+# ---------- .NET / NuGet ----------
+*.nupkg
+*.snupkg
+*.nuget.props
+*.nuget.targets
+project.lock.json
+project.fragment.lock.json
+.packages/
+packages/
+!**/packages/build/
+.nuget/
+*.lock.json
+
+# ---------- EF Core / SQLite ----------
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+*.mdf
+*.ldf
+
+# ---------- Secrets / local config ----------
+*.env
+.env
+.env.*
+appsettings.*.Local.json
+appsettings.Local.json
+secrets.json
+*.pfx
+*.key
+
+# ---------- Coverage / profiling ----------
+coverage/
+*.coverage
+*.coveragexml
+*.opencover.xml
+*.trx
+BenchmarkDotNet.Artifacts/
+
+# ---------- Misc ----------
+*.log
+*.tmp
+*.bak
+*.orig
+node_modules/
+samples/
+
+# ---------- OS ----------
+desktop.ini
