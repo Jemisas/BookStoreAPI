@@ -1,0 +1,52 @@
+{
+  "providerId": "Microsoft.Tools.ServiceModel.Svcutil",
+  "version": "8.0.0",
+  "options": {
+    "inputs": [
+      "http://webservices.daehosting.com/services/isbnservice.wso?wsdl"
+    ],
+    "namespaceMappings": [
+      "*, BookStoreAPI.IsbnService"
+    ],
+    "outputFile": "Reference.cs",
+    "references": [
+      "BCrypt.Net-Next, {BCrypt.Net-Next, 4.1.0}",
+      "CsvHelper, {CsvHelper, 33.1.0}",
+      "FluentValidation, {FluentValidation, 11.11.0}",
+      "FluentValidation.AspNetCore, {FluentValidation.AspNetCore, 11.3.1}",
+      "FluentValidation.DependencyInjectionExtensions, {FluentValidation.DependencyInjectionExtensions, 11.11.0}",
+      "Microsoft.AspNetCore.Authentication.JwtBearer, {Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.10}",
+      "Microsoft.Data.Sqlite, {Microsoft.Data.Sqlite.Core, 8.0.10}",
+      "Microsoft.EntityFrameworkCore, {Microsoft.EntityFrameworkCore, 8.0.10}",
+      "Microsoft.EntityFrameworkCore.Abstractions, {Microsoft.EntityFrameworkCore.Abstractions, 8.0.10}",
+      "Microsoft.EntityFrameworkCore.Relational, {Microsoft.EntityFrameworkCore.Relational, 8.0.10}",
+      "Microsoft.EntityFrameworkCore.Sqlite, {Microsoft.EntityFrameworkCore.Sqlite.Core, 8.0.10}",
+      "Microsoft.Extensions.Caching.Abstractions, {Microsoft.Extensions.Caching.Abstractions, 8.0.0}",
+      "Microsoft.Extensions.Caching.Memory, {Microsoft.Extensions.Caching.Memory, 8.0.1}",
+      "Microsoft.Extensions.Configuration.Abstractions, {Microsoft.Extensions.Configuration.Abstractions, 8.0.0}",
+      "Microsoft.Extensions.DependencyInjection, {Microsoft.Extensions.DependencyInjection, 8.0.1}",
+      "Microsoft.Extensions.DependencyInjection.Abstractions, {Microsoft.Extensions.DependencyInjection.Abstractions, 8.0.2}",
+      "Microsoft.Extensions.DependencyModel, {Microsoft.Extensions.DependencyModel, 8.0.2}",
+      "Microsoft.Extensions.Logging, {Microsoft.Extensions.Logging, 8.0.1}",
+      "Microsoft.Extensions.Logging.Abstractions, {Microsoft.Extensions.Logging.Abstractions, 8.0.2}",
+      "Microsoft.Extensions.Options, {Microsoft.Extensions.Options, 8.0.2}",
+      "Microsoft.Extensions.Primitives, {Microsoft.Extensions.Primitives, 8.0.0}",
+      "Microsoft.IdentityModel.Abstractions, {Microsoft.IdentityModel.Abstractions, 8.0.2}",
+      "Microsoft.IdentityModel.JsonWebTokens, {Microsoft.IdentityModel.JsonWebTokens, 8.0.2}",
+      "Microsoft.IdentityModel.Logging, {Microsoft.IdentityModel.Logging, 8.0.2}",
+      "Microsoft.IdentityModel.Protocols, {Microsoft.IdentityModel.Protocols, 7.1.2}",
+      "Microsoft.IdentityModel.Protocols.OpenIdConnect, {Microsoft.IdentityModel.Protocols.OpenIdConnect, 7.1.2}",
+      "Microsoft.IdentityModel.Tokens, {Microsoft.IdentityModel.Tokens, 8.0.2}",
+      "Microsoft.OpenApi, {Microsoft.OpenApi, 1.6.14}",
+      "SQLitePCLRaw.batteries_v2, {SQLitePCLRaw.bundle_e_sqlite3, 2.1.6}",
+      "SQLitePCLRaw.core, {SQLitePCLRaw.core, 2.1.6}",
+      "SQLitePCLRaw.provider.e_sqlite3, {SQLitePCLRaw.provider.e_sqlite3, 2.1.6}",
+      "Swashbuckle.AspNetCore.Swagger, {Swashbuckle.AspNetCore.Swagger, 6.6.2}",
+      "Swashbuckle.AspNetCore.SwaggerGen, {Swashbuckle.AspNetCore.SwaggerGen, 6.6.2}",
+      "Swashbuckle.AspNetCore.SwaggerUI, {Swashbuckle.AspNetCore.SwaggerUI, 6.6.2}",
+      "System.IdentityModel.Tokens.Jwt, {System.IdentityModel.Tokens.Jwt, 8.0.2}"
+    ],
+    "targetFramework": "net8.0",
+    "typeReuseMode": "All"
+  }
+}
