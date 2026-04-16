@@ -30,6 +30,11 @@ public class BookService : IBookService
 
     public async Task<PaginatedResponseDto<BookResponseDto>> GetAllAsync(int page, int pageSize, string? titleFilter, string? authorFilter)
     {
+        if (page < 1)
+            throw new ArgumentException("page must be greater than or equal to 1.", nameof(page));
+        if (pageSize < 1 || pageSize > 1000)
+            throw new ArgumentException("pageSize must be between 1 and 1000.", nameof(pageSize));
+
         var (items, totalCount) = await _bookRepository.GetAllAsync(page, pageSize, titleFilter, authorFilter);
 
         return new PaginatedResponseDto<BookResponseDto>

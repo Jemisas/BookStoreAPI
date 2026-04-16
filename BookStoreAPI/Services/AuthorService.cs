@@ -17,6 +17,11 @@ public class AuthorService : IAuthorService
 
     public async Task<PaginatedResponseDto<AuthorResponseDto>> GetAllAsync(int page, int pageSize)
     {
+        if (page < 1)
+            throw new ArgumentException("page must be greater than or equal to 1.", nameof(page));
+        if (pageSize < 1 || pageSize > 1000)
+            throw new ArgumentException("pageSize must be between 1 and 1000.", nameof(pageSize));
+
         var (items, totalCount) = await _authorRepository.GetAllAsync(page, pageSize);
 
         return new PaginatedResponseDto<AuthorResponseDto>
