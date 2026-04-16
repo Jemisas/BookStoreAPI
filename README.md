@@ -1,6 +1,20 @@
 # BookStoreAPI
 
-API REST para gestionar libros y autores. Instrucciones para correrla con Docker.
+API REST para gestionar libros y autores.
+
+## Resumen del proyecto
+
+- **Framework**: ASP.NET Core Web API sobre .NET 8.
+- **Persistencia**: Entity Framework Core con SQLite en memoria (`DataSource=:memory:`).
+- **Autenticación**: JWT Bearer, contraseñas con BCrypt.
+- **Validación**: Data Annotations + FluentValidation.
+- **Integraciones externas**: Open Library (REST, vía `IHttpClientFactory`) para portadas y daehosting (SOAP, cliente generado con `dotnet-svcutil`) para validar ISBN.
+- **CSV**: CsvHelper para la carga masiva de libros.
+- **Pruebas**: xUnit con Moq y FluentAssertions (tests de servicio y de controlador con `WebApplicationFactory`).
+- **Documentación**: Swagger/OpenAPI en la raíz.
+- **Arquitectura**: Clean Architecture en 3 capas — `Controller → Service → Repository`, comunicadas siempre por interfaces y registradas en DI. Los controllers solo manejan HTTP, los services concentran la lógica de negocio (normalización, orquestación SOAP/REST, emisión de JWT) y los repositories son el único punto de acceso a `AppDbContext`. Un middleware central traduce las excepciones a `ProblemDetails` (RFC 7807).
+
+## Docker
 
 El `Dockerfile` está en `BookStoreAPI/BookStoreAPI/` (junto al `.csproj`). Es multi-stage: `mcr.microsoft.com/dotnet/sdk:8.0` para compilar y `mcr.microsoft.com/dotnet/aspnet:8.0` como runtime.
 
